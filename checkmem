@@ -1,0 +1,54 @@
+#!/bin/sh
+# Check if enough memory (in MB) is available to start application
+# (C) Klaus Knopper Sep 2000
+
+MEMNEEDED="$1" ; shift
+PROGRAM="$1"
+
+[ -f /etc/sysconfig/knoppix ] && . /etc/sysconfig/knoppix
+
+if [ -z "$MEMNEEDED" -o -z "$PROGRAM" ]
+then
+case "$LANGUAGE" in
+	es)
+		echo "Uso: $0 memoria_requerida[kb] programa" >&2
+		;;
+	*)
+		echo "Usage: $0 mem_required[kb] program" >&2
+		;;
+esac
+exit 1
+fi
+
+MEMFREE="$(cat /proc/meminfo | awk 'BEGIN{m=0};/MemFree|Cached|Buffers|SwapFree/{m+=$2};END{print m}')"
+
+MBF="$(expr $MEMFREE   / 1000000)"
+MBN="$(expr $MEMNEEDED / 1000000)"
+
+if [ "$MBF" -ge "$MBN" ]
+then
+exec "$@"
+else
+case "$LANGUAGE" in
+de*|DE*)
+MESSAGE="Nicht genug Hauptspeicher zum Start von ${PROGRAM}!
+(Mindestens ${MBN}MB erforderlich, ${MBF}MB vorhanden.)"
+;;
+es)
+MESSAGE="¡No hay suficiente memoria para arrancar ${PROGRAM}!
+(Se necesitan ${MBN}MB como mínimo, pero sólo hay disponibles
+${MBF}MB en su sistema.)"
+;;
+*)
+MESSAGE="Not enough memory to start ${PROGRAM}!
+(At least ${MBN}MB are required, but only
+${MBF}MB are available on your system.)"
+;;
+esac
+if [ -n "$DISPLAY" ]
+then
+exec xmessage "$MESSAGE"
+else
+echo "$MESSAGE" >&2
+fi
+fi

@@ -1,0 +1,13 @@
+Source: checkmem-kanotix
+Section: kanotix
+Priority: optional
+Maintainer: Stefan Lippers-Hollmann
+Build-Depends: cdbs, debhelper (>> 3.0.0)
+Standards-Version: 3.6.0
+
+Package: checkmem-kanotix
+Architecture: all
+Depends: hwsetup-kanotix, gawk, xbase-clients
+Provides: checkmem
+Replaces: checkmem
+Description: Simple script to check if enough memory is available
