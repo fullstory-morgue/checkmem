@@ -1,3 +1,9 @@
+checkmem-kanotix (0.5.6) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 11 Mar 2006 23:08:29 +0100
+
 checkmem-kanotix (0.5.5) unstable; urgency=low
 
   * remove cdbs auto-update feature.
