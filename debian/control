@@ -7,6 +7,7 @@ Standards-Version: 3.6.2
 
 Package: checkmem-kanotix
 Architecture: all
-Depends: initscripts-kanotix-live, gawk, xbase-clients
+Depends: gawk, xbase-clients
+Suggests: initscripts-kanotix-live
 Description: Simple script to check if enough memory is available
  Check if we have enough memory installed for starting X.
