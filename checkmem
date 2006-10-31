@@ -33,7 +33,7 @@ else
 			MESSAGE="Nicht genug Hauptspeicher zum Start von ${PROGRAM}! (Mindestens ${MBN}MB erforderlich, ${MBF}MB vorhanden.)"
 			;;
 		es)
-			MESSAGE="¡No hay suficiente memoria para arrancar ${PROGRAM}! (Se necesitan ${MBN}MB como mínimo, pero sólo hay disponibles ${MBF}MB en su sistema.)"
+			MESSAGE="Â¡No hay suficiente memoria para arrancar ${PROGRAM}! (Se necesitan ${MBN}MB como mÃ­nimo, pero sÃ³lo hay disponibles ${MBF}MB en su sistema.)"
 			;;
 		*)
 			MESSAGE="Not enough memory to start ${PROGRAM}! (At least ${MBN}MB are required, but only ${MBF}MB are available on your system.)"

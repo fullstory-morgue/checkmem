@@ -1,8 +1,8 @@
-checkmem-kanotix (0.5.8) UNRELEASED; urgency=low
+checkmem-kanotix (0.5.8) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch to utf-8.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 19 Mar 2006 14:59:47 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 31 Oct 2006 23:29:32 +0100
 
 checkmem-kanotix (0.5.7) unstable; urgency=low
 
