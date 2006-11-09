@@ -1,23 +1,22 @@
 #!/bin/sh
 # Check if enough memory (in MB) is available to start application
 # (C) Klaus Knopper Sep 2000
+# (C) 2004-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
-MEMNEEDED="$1" ; shift
-PROGRAM="$1"
+MEMNEEDED="$1"
+PROGRAM="$2"
 
-[ -f /etc/sysconfig/knoppix ] && . /etc/sysconfig/knoppix
-
-if [ -z "$MEMNEEDED" -o -z "$PROGRAM" ]
-then
-case "$LANGUAGE" in
-	es)
-		echo "Uso: $0 memoria_requerida[kb] programa" >&2
-		;;
-	*)
-		echo "Usage: $0 mem_required[kb] program" >&2
-		;;
-esac
-exit 1
+if [ -z "$MEMNEEDED" -o -z "$PROGRAM" ]; then
+	case "$LANG" in
+		es*)
+			echo "Uso: $0 memoria_requerida[kb] programa" >&2
+			;;
+		*)
+			echo "Usage: $0 mem_required[kb] program" >&2
+			;;
+	esac
+	
+	exit 1
 fi
 
 MEMFREE="$(cat /proc/meminfo | awk 'BEGIN{m=0};/MemFree|Cached|Buffers|SwapFree/{m+=$2};END{print m}')"
@@ -28,7 +27,7 @@ MBN="$(expr $MEMNEEDED / 1000000)"
 if [ "$MBF" -ge "$MBN" ]; then
 	exec "$@"
 else
-	case "$LANGUAGE" in
+	case "$LANG" in
 		de*|DE*)
 			MESSAGE="Nicht genug Hauptspeicher zum Start von ${PROGRAM}! (Mindestens ${MBN}MB erforderlich, ${MBF}MB vorhanden.)"
 			;;

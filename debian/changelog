@@ -1,8 +1,9 @@
-checkmem-kanotix (0.5.10) UNRELEASED; urgency=low
+checkmem-kanotix (0.5.10) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * get rid of useless /etc/sysconfig/ dependency.
+  * fix i18n handling.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 31 Oct 2006 23:36:19 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  9 Nov 2006 18:47:01 +0100
 
 checkmem-kanotix (0.5.9) unstable; urgency=low
 
