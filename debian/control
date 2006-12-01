@@ -1,13 +1,14 @@
-Source: checkmem-kanotix
+Source: checkmem
 Section: admin
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: cdbs (>= 0.4.23-1.1), debhelper (>= 5.0.0)
 Standards-Version: 3.7.2
 
-Package: checkmem-kanotix
+Package: checkmem
 Architecture: all
 Depends: gawk, xbase-clients
-Suggests: initscripts-kanotix-live
+Conflicts: checkmem-kanotix
+Suggests: initscripts-sidux-live
 Description: Simple script to check if enough memory is available
  Check if we have enough memory installed for starting X.
