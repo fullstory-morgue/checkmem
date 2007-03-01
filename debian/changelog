@@ -1,8 +1,9 @@
-checkmem (0.5.12) UNRELEASED; urgency=low
+checkmem (0.5.12) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * checkmem-kanotix never existed in sidux or debian, don't conflict with it.
+  * lift strict dependency on xbase-clients.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun,  3 Dec 2006 02:13:30 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  1 Mar 2007 11:58:58 +0100
 
 checkmem (0.5.11) unstable; urgency=low
 
