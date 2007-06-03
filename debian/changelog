@@ -1,9 +1,10 @@
-checkmem (0.5.13) UNRELEASED; urgency=low
+checkmem (0.5.13) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHAN PACKAGE, it isn't used anywhere.
   * don't suggest initscripts-sidux-live.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 03 Jun 2007 14:59:41 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 03 Jun 2007 15:19:53 +0200
 
 checkmem (0.5.12) unstable; urgency=low
 
