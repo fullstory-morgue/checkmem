@@ -8,6 +8,6 @@ Standards-Version: 3.7.2
 Package: checkmem
 Architecture: all
 Depends: gawk
-Suggests: initscripts-sidux-live, xbase-clients
+Suggests: xbase-clients
 Description: Simple script to check if enough memory is available
  Check if we have enough memory installed for starting X.

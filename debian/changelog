@@ -1,8 +1,9 @@
 checkmem (0.5.13) UNRELEASED; urgency=low
 
   * NOT RELEASED YET
+  * don't suggest initscripts-sidux-live.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  1 Mar 2007 12:02:31 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 03 Jun 2007 14:59:41 +0200
 
 checkmem (0.5.12) unstable; urgency=low
 
